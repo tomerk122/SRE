@@ -1,7 +1,3 @@
-# Helfy Assignment - Full-Stack Application
-
-A complete full-stack application with authentication, database integration, message queue, and monitoring capabilities built for professional development assessment.
-
 ## 🏗️ Architecture Overview
 
 This application implements a modern microservices architecture with the following components:
