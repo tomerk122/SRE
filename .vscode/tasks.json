@@ -1,0 +1,75 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Full Application",
+			"type": "shell",
+			"command": "./setup.sh",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Docker Compose Up",
+			"type": "shell",
+			"command": "docker-compose up --build",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Docker Compose Down",
+			"type": "shell",
+			"command": "docker-compose down",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "View Application Logs",
+			"type": "shell",
+			"command": "docker-compose logs -f",
+			"group": "test",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Health Check All Services",
+			"type": "shell",
+			"command": "curl http://localhost:3001/api/health && echo '' && curl http://localhost:10080/status && echo '' && curl http://localhost:3003/health",
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Backend Dependencies",
+			"type": "shell",
+			"command": "cd backend && npm install",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Install Frontend Dependencies",
+			"type": "shell",
+			"command": "cd frontend && npm install",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Install Consumer Dependencies",
+			"type": "shell",
+			"command": "cd consumer && npm install",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}

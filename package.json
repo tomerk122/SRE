@@ -1,0 +1,23 @@
+{
+    "name": "helfy-assign",
+    "version": "1.0.0",
+    "description": "Full-stack application with authentication, TiDB, and Kafka integration",
+    "main": "index.js",
+    "scripts": {
+        "start": "docker-compose up",
+        "dev": "docker-compose up --build",
+        "backend": "cd backend && npm start",
+        "frontend": "cd frontend && npm start",
+        "consumer": "cd consumer && npm start",
+        "setup": "chmod +x setup.sh && ./setup.sh"
+    },
+    "keywords": [
+        "nodejs",
+        "react",
+        "tidb",
+        "kafka",
+        "docker"
+    ],
+    "author": "",
+    "license": "MIT"
+}
